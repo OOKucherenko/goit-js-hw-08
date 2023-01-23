@@ -1,9 +1,8 @@
-// Add imports above this line
-import { galleryItems } from './gallery-items';
-// Change code below this line
-// import c from 'simplelightbox';
-// import 'simplelightbox/dist/simple-lightbox.min.css';
-// Change code below this line
+// import galleryItems from './gallery-items.js';
+
+import SimpleLightbox from 'simplelightbox';
+// import '../node_modules/simplelightbox/dist/simple-lightbox.min.css';
+
 // console.log(galleryItems);
 // const containerGallery = document.querySelector('.gallery');
 // const imgMarkup = createImages(galleryItems);
@@ -20,7 +19,7 @@ import { galleryItems } from './gallery-items';
 //     .join('');
 // }
 
-// let gallery = new SimpleLightbox('.gallery a', {
-//   captionsData: 'alt',
-//   captionDelay: '250',
-// });
+let gallery = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: '250',
+});
