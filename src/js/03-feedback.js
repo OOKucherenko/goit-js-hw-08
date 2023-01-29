@@ -12,7 +12,7 @@ refs.input.value =
 refs.textarea.value =
   JSON.parse(localStorage.getItem(refs.LOCALSTORAGE_KEY))?.textareaValue || '';
 
-const form = {
+let form = {
   inputValue:
     JSON.parse(localStorage.getItem(refs.LOCALSTORAGE_KEY))?.inputValue || '',
   textareaValue:
@@ -37,6 +37,7 @@ refs.textarea.addEventListener('input', throttle(handleTextarea, 500));
 refs.formSubmit.addEventListener('submit', e => {
   e.preventDefault();
   e.currentTarget.reset();
+  form = {};
   localStorage.removeItem(refs.LOCALSTORAGE_KEY);
   console.log(form);
 });
